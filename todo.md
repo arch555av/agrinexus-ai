@@ -35,3 +35,18 @@
 - [x] Add a restrained agricultural intelligence visual accent using compatible 3D/glass/gradient techniques.
 - [x] Improve dashboard hierarchy, cards, data states, and responsive UX.
 - [x] Verify the enhanced login, landing page, dashboard, and mobile layout with tests and screenshots.
+
+- [x] Inspect the selected GitHub repositories and compare their visual primitives with the current AgriNexus frontend.
+- [x] Document repository licensing, compatibility, and integration decisions.
+- [x] Integrate the selected repository-inspired effects without replacing the existing UI or breaking backend/auth flows.
+- [x] Verify landing, login, dashboard, mobile, accessibility, and bundle behavior after the repository enhancements.
+
+- [x] Persist a repository license summary and final compatibility decisions in project documentation.
+- [x] Add route-level lazy loading to keep heavy visual dependencies out of the landing-page initial bundle.
+- [x] Document the remaining Three.js dependency warning and its impact, or remove the affected runtime path.
+- [x] Document an explicit accessibility verification pass for login and dashboard flows.
+
+- [x] Run an explicit accessibility QA pass for login and dashboard keyboard/focus semantics.
+- [x] Add test evidence for focus visibility, reduced motion, and semantic interactive controls.
+
+- [x] Save and deliver the repository-enhanced frontend checkpoint.

@@ -1,14 +1,22 @@
+import { lazy, Suspense } from 'react'
 import { Route, Switch } from 'wouter'
 import Home from './pages/Home'
-import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
+
+const Login = lazy(() => import('./pages/Login'))
+const Dashboard = lazy(() => import('./pages/Dashboard'))
+
+function RouteLoading() {
+  return <div className="dashboard-loading"><div className="loading-orbit" /><p>Opening your field desk…</p></div>
+}
 
 export default function App() {
   return (
-    <Switch>
-      <Route path="/login" component={Login} />
-      <Route path="/dashboard" component={Dashboard} />
-      <Route path="/" component={Home} />
-    </Switch>
+    <Suspense fallback={<RouteLoading />}>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </Suspense>
   )
 }

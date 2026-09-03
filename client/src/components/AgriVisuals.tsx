@@ -1,4 +1,4 @@
-import { MeshGradient } from '@paper-design/shaders-react'
+import { ShaderGradient, ShaderGradientCanvas } from '@shadergradient/react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { motion, useReducedMotion } from 'motion/react'
 import { useRef } from 'react'
@@ -29,13 +29,9 @@ export function AgriSignalOrb({ compact = false }: { compact?: boolean }) {
       animate={reduce ? undefined : { opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
     >
-      <MeshGradient
-        colors={['#0f2619', '#2e7048', '#78bd87', '#e9f2db']}
-        distortion={0.75}
-        swirl={0.6}
-        speed={0.16}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.9 }}
-      />
+      <ShaderGradientCanvas style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} pixelDensity={1.2} fov={45} lazyLoad>
+        <ShaderGradient type="waterPlane" animate="on" uSpeed={0.16} uStrength={1.2} uDensity={1.3} uFrequency={3} color1="#123b2b" color2="#4f9a68" color3="#c9e9b9" cDistance={3.4} cPolarAngle={110} cAzimuthAngle={180} lightType="3d" envPreset="dawn" grain="on" grainBlending={0.18} />
+      </ShaderGradientCanvas>
       <div className="orb-glass" aria-hidden="true" />
       <Canvas className="orb-canvas" camera={{ position: [0, 0, 3.1], fov: 42 }} dpr={[1, 1.5]}>
         <ambientLight intensity={1.4} />
