@@ -130,9 +130,11 @@ export default function AgentArchitecture() {
                   padding: '1.5rem',
                   cursor: 'pointer',
                   background: activeAgent === agent.id ? agent.bg : 'var(--color-warm-white)',
-                  borderColor: activeAgent === agent.id ? agent.color + '40' : 'var(--color-dune)',
-                  transition: 'all 0.25s ease',
                   borderTop: `3px solid ${flowStep === i ? agent.color : 'var(--color-dune)'}`,
+                  borderRight: `1px solid ${activeAgent === agent.id ? agent.color + '40' : 'var(--color-dune)'}`,
+                  borderBottom: `1px solid ${activeAgent === agent.id ? agent.color + '40' : 'var(--color-dune)'}`,
+                  borderLeft: `1px solid ${activeAgent === agent.id ? agent.color + '40' : 'var(--color-dune)'}`,
+                  transition: 'all 0.25s ease',
                 }}
                 onMouseEnter={() => setActiveAgent(agent.id)}
                 onMouseLeave={() => setActiveAgent(null)}

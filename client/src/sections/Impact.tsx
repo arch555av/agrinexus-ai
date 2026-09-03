@@ -90,9 +90,11 @@ export default function Impact() {
                 animationDelay: `${(i % 3) * 100 + 300}ms`,
                 padding: '2rem 1.75rem',
                 background: m.bg,
-                border: `1px solid ${m.color}20`,
-                borderRadius: 18,
                 borderTop: `2px solid ${m.color}`,
+                borderRight: `1px solid ${m.color}20`,
+                borderBottom: `1px solid ${m.color}20`,
+                borderLeft: `1px solid ${m.color}20`,
+                borderRadius: 18,
                 transition: 'transform 0.25s ease, box-shadow 0.25s ease',
               }}
               onMouseEnter={e => {

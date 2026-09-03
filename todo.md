@@ -23,3 +23,6 @@
 - [x] Add endpoint-level tests for ownership enforcement, validation failures, advisory, and crop assessment flows.
 - [x] Exercise the interactive frontend button against the backend in the browser.
 - [x] Save a final checkpoint after resolving the remaining gaps.
+
+- [x] Fix Pillars page React warning caused by mixing borderColor with borderTop shorthand during rerender.
+- [x] Verify the border fix with tests, type checks, and a Pillars page screenshot.
