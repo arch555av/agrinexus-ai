@@ -1,42 +1,41 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
-import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import Nav from './sections/Nav'
+import Hero from './sections/Hero'
+import Problem from './sections/Problem'
+import Pillars from './sections/Pillars'
+import IntelligenceLoop from './sections/IntelligenceLoop'
+import FarmerExperience from './sections/FarmerExperience'
+import SatelliteIntelligence from './sections/SatelliteIntelligence'
+import AgentArchitecture from './sections/AgentArchitecture'
+import NudgeEngine from './sections/NudgeEngine'
+import PolicyDashboard from './sections/PolicyDashboard'
+import BRICSNetwork from './sections/BRICSNetwork'
+import Impact from './sections/Impact'
+import TechStack from './sections/TechStack'
+import InteractiveDemo from './sections/InteractiveDemo'
+import FinalCTA from './sections/FinalCTA'
+import Footer from './sections/Footer'
 
-function Router() {
-  // make sure to consider if you need authentication for certain routes
+export default function App() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+    <div style={{ minHeight: '100vh', backgroundColor: 'var(--color-parchment)' }}>
+      <Nav />
+      <main>
+        <Hero />
+        <Problem />
+        <Pillars />
+        <IntelligenceLoop />
+        <FarmerExperience />
+        <SatelliteIntelligence />
+        <AgentArchitecture />
+        <NudgeEngine />
+        <PolicyDashboard />
+        <BRICSNetwork />
+        <Impact />
+        <TechStack />
+        <InteractiveDemo />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </div>
+  )
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
-}
-
-export default App;

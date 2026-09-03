@@ -1,5 +1,27 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1788455620620,
+      "tag": "0000_robust_the_hunter",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1788456761999,
+      "tag": "0001_certain_thunderbolt_ross",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1788456986845,
+      "tag": "0002_tranquil_mattie_franklin",
+      "breakpoints": true
+    }
+  ]
 }
