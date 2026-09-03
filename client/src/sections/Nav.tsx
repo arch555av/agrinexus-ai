@@ -89,8 +89,8 @@ export default function Nav() {
           <a href="#demo" className="btn-secondary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
             Explore the Intelligence
           </a>
-          <a href="#demo" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
-            Try AgriNexus AI
+          <a href="/dashboard" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
+            Open Field Desk
           </a>
         </div>
 
@@ -150,8 +150,8 @@ export default function Nav() {
             <a href="#demo" className="btn-secondary" style={{ fontSize: '0.875rem', flex: 1, justifyContent: 'center' }}>
               Explore Intelligence
             </a>
-            <a href="#demo" className="btn-primary" style={{ fontSize: '0.875rem', flex: 1, justifyContent: 'center' }}>
-              Try AgriNexus AI
+            <a href="/dashboard" className="btn-primary" style={{ fontSize: '0.875rem', flex: 1, justifyContent: 'center' }}>
+              Open Field Desk
             </a>
           </div>
         </div>

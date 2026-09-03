@@ -1,33 +1,28 @@
-import { useAuth } from "@/_core/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Nav from '../sections/Nav'
+import Hero from '../sections/Hero'
+import Problem from '../sections/Problem'
+import Pillars from '../sections/Pillars'
+import IntelligenceLoop from '../sections/IntelligenceLoop'
+import FarmerExperience from '../sections/FarmerExperience'
+import SatelliteIntelligence from '../sections/SatelliteIntelligence'
+import AgentArchitecture from '../sections/AgentArchitecture'
+import NudgeEngine from '../sections/NudgeEngine'
+import PolicyDashboard from '../sections/PolicyDashboard'
+import BRICSNetwork from '../sections/BRICSNetwork'
+import Impact from '../sections/Impact'
+import TechStack from '../sections/TechStack'
+import InteractiveDemo from '../sections/InteractiveDemo'
+import FinalCTA from '../sections/FinalCTA'
+import Footer from '../sections/Footer'
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // The useAuth hook provides authentication state.
-  // To implement login/logout, call logout(), or start login from an event
-  // handler: onClick={() => startLogin()} (imported from "@/const"). Never call
-  // startLogin() during render (no href={startLogin()}) — it mints a one-time
-  // nonce cookie and must run only at the moment of navigation.
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div style={{ minHeight: '100vh', backgroundColor: 'var(--color-parchment)' }}>
+      <Nav />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero /><Problem /><Pillars /><IntelligenceLoop /><FarmerExperience /><SatelliteIntelligence /><AgentArchitecture /><NudgeEngine /><PolicyDashboard /><BRICSNetwork /><Impact /><TechStack /><InteractiveDemo /><FinalCTA />
       </main>
+      <Footer />
     </div>
-  );
+  )
 }

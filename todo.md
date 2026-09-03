@@ -26,3 +26,12 @@
 
 - [x] Fix Pillars page React warning caused by mixing borderColor with borderTop shorthand during rerender.
 - [x] Verify the border fix with tests, type checks, and a Pillars page screenshot.
+
+- [x] Audit current frontend theme, authentication entry flow, dashboard, and reusable components.
+- [x] Research and select compatible Framer Motion, react-three-fiber, liquid-glass, shader-gradient, and liquid-logo options.
+- [x] Add a cohesive AgriNexus visual theme across the frontend while preserving the supplied identity.
+- [x] Build a polished responsive login/authentication page connected to the existing auth flow.
+- [x] Add purposeful Framer Motion transitions and reduced-motion support.
+- [x] Add a restrained agricultural intelligence visual accent using compatible 3D/glass/gradient techniques.
+- [x] Improve dashboard hierarchy, cards, data states, and responsive UX.
+- [x] Verify the enhanced login, landing page, dashboard, and mobile layout with tests and screenshots.
